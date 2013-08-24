@@ -3,77 +3,53 @@
     <title>MeToo2</title>
     <link rel = "stylesheet" type = "text/css" href = "main.css"></link>
   </head>
-
   <body>
-
-
-
     <div class="mitou">
       <div class="mainTitle">&nbsp;MeToo</div>
-       <div class="status"><b><%= "#{the_user_name}" %></b></div>
-      
-      <div>
+      <div class="status"><b><%= "#{the_user_name}" %></b></div>
 
-    <div class="menu">
-    <ul class="horizontal">
-      <li>
-       
-      </li>
-
-      <li>
-        <a href = "/">home&nbsp;</a>
-      </li>
-      <% if is_logged_in? %>
-       <li>
+        <div class="menu">
+          <ul class="horizontal">
+            <li>
+            </li>
+            <li>
+              <a href = "/">home&nbsp;</a>
+            </li>
+            <% if is_logged_in? %>
+            <li>
+              <a href = "/my_posts">my posts&nbsp;</a>
+            </li>
+            <% if @new_messages_number.to_i() > 0 %>
+            <li>
+              <a href = "/my_messages">messages (<%= @new_messages_number %>)&nbsp;</a>
+            </li>
+            <% else %>
+            <li>
+              <a href = "/my_messages">messages&nbsp;</a>
+            </li>
+            <% end %>
+            <% end %>
+            <li>
+              <a href = "/search">search&nbsp;</a>
+            </li>
+            <li>
+              <a href = "/about">about&nbsp;</a>
+            </li>
+            <li>
+              <% if !is_logged_in? %>
+              <a href = "/login">login&nbsp;</a>
+              <% else %>
+              <a href = "/logout">logout&nbsp;</a>
+              <% end %>
+            </li>
+            <% if !is_logged_in? %>
+            <li>
+              <a href = "/signup">signup&nbsp;</a>
+            </li>
+            <% end %>
+          </div>
         
-          <a href = "/my_posts">my posts&nbsp;</a>
-        
-      </li>
-
-<% if @new_messages_number.to_i() > 0 %>
-      <li>
-        
-          <a href = "/my_messages">messages (<%= @new_messages_number %>)&nbsp;</a>
-        
-      </li>
-<% else %>
-
- <li>
-        
-          <a href = "/my_messages">messages&nbsp;</a>
-        
-      </li>
-
-<% end %>
-
-
-      <% end %>
-      <li>
-        <a href = "/search">search&nbsp;</a>
-      </li>
-      
-      <li>
-        <a href = "/about">about&nbsp;</a>
-      </li>
-
-      <li>
-        <% if !is_logged_in? %>
-          <a href = "/login">login&nbsp;</a>
-        <% else %>
-          <a href = "/logout">logout&nbsp;</a>
-        <% end %>
-      </li>
-       <% if !is_logged_in? %>
-      <li>
-        
-        <a href = "/signup">signup&nbsp;</a>
-      </li>
-       <% end %>
-       
-     
-      </div>
-    </div>
-<div class="content">
+        <div class="content">
         <% if !@error_message.nil? %>
           <div class="error"><%= "There was an error: #{@error_message}" %></div>
         <% end %>
