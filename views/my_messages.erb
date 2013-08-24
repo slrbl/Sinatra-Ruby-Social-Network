@@ -1,0 +1,59 @@
+<div class="content">
+
+	<h1>Send a new message</h1>
+
+	<form action = "/my_messages" method = "post">
+	
+	<h3>To</h3>
+
+		<p><input class="title_input"type = "text"  name =  "to" id = "to" width = "200"/></input></p>
+
+		<h3>Subject</h3>
+
+		<p><input class="title_input"type = "text"  name =  "subject" id = "subject" width = "200"/></input></p>
+	
+
+		<h3>Message</h3>
+		<textarea type = "text"  name =  "message" id = "message" /></textarea>
+
+	<p>
+		<input type = "submit" value="send"/>
+	</p>
+</form>
+
+<!--
+<h1>Here are all your sent messages</h1>
+<% @messages.each do |message| %> 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="line"></div>
+<h3>To <%= message.receiver %></h3>
+<h4>Subject <%= message.subject %></h4> 
+<p><%= message.content %></p>
+<% end %>-->
+
+<h3>you have (<%= @new_messages_number %>) unread messages</h3>
+
+
+	<h1>Here are all your received messages</h1>
+<% @messages.each do |message| %> 
+
+<% if message.receiver==the_user_name %>
+
+    
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<div class="line"></div>
+
+
+
+<h3>To <%= message.receiver %></h3>
+<h3>From <%= message.user_username %></h3>
+<h4>Subject <%= message.subject %></h4> 
+<p><%= message.content %></p>
+ <% message.status="read" %>
+  <% message.save %>
+  <% end %>
+<% end %>
+</div>

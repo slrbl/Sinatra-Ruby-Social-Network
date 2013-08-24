@@ -1,0 +1,248 @@
+body
+{
+	padding: 20px;
+	margin: 0px;
+	background-color: grey;
+}
+
+.button 
+{
+	border: 1px solid white;
+	background: white;
+}
+
+li
+{
+	font-size: 14px;
+	font-family: lucida grande;
+	text-decoration:none;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: 000033;
+	font-size:14px;
+}
+
+a:active 
+{
+	text-decoration: none;
+	color: white;
+	font-size:14px;
+}
+
+a:hover 
+{
+	text-decoration: none; 
+	color: white;
+	font-size:14px;
+}
+
+a:visited
+{
+	text-decoration:none;
+	
+	font-size:14px;
+}
+
+ul.horizontal, ol.horizontal, .horizontal li 
+{
+	display: inline;
+	text-decoration:none;
+}
+
+.error 
+{
+	color: black;
+	padding: 10px;
+	margin:auto;
+
+
+
+	width: 700px;
+	font-family: lucida grande;
+}
+
+.message 
+{  
+	color: grey;
+	padding: 10px;
+	margin:auto;
+	font-size: 14px;	
+	width: 700px;
+	font-family: lucida grande;
+}
+
+
+.mainTitle {
+
+	float:left;
+	padding: 10px;
+	color: white;
+	margin:auto;
+	width: 45%;
+	height:30px;
+	font-size:30px;
+	text-align: left;
+	background-color:#D0D0D0;
+	text-decoration:none;
+	font-family: lucida grande;
+}
+
+
+.status {
+
+	float:left;
+	padding: 10px;
+	color: brown;
+	margin:auto;
+	width: 50%;
+	height:30px;
+	font-size:14px;
+	text-align: right;
+	background-color:#D0D0D0;
+	text-decoration:none;
+
+
+	font-family: lucida grande;
+}
+
+.title_input{
+	width: 200px;
+}
+
+.comment_input{
+	width: 600px;
+	background-color:silver;
+}
+
+textarea
+{
+	width: 700px;
+	height: 50px;
+    disabled
+}
+
+.line{
+	background-color: #D0D0D0;
+	width: 700px;
+	height: 1	px;
+
+}
+
+.linecomment{
+	background-color: white;
+	width: 620px;
+	height: 1px;
+}
+
+p
+{
+    font-size: 11px; /* Paragraphes de 14 pixels */
+    font-family: lucida grande;
+    text-align: left;
+}
+
+h1
+{
+    font-size: 20px; /* Titres de 40 pixels */
+    font-family: lucida grande;
+    text-align: left;
+    color: grey;
+}
+
+h2
+{
+    font-size: 14px; /* Titres de 40 pixels */
+    font-family: lucida grande;
+    text-align: left;
+}
+
+h3
+{
+    font-size: 12px; /* Titres de 40 pixels */
+    font-family: lucida grande;
+    text-align: left;
+}
+
+h4
+{
+    font-size: 11px; /* Titres de 40 pixels */
+    font-family: lucida grande;
+    text-align: left;
+}
+
+.delete_button
+{
+	float:left;
+}
+
+.modify_button
+{
+	float:left;
+}
+
+.content
+{
+	text-align: center;
+	margin:auto;
+	width: 700px;
+}
+
+.button_container
+{
+	text-align: right;
+	margin:auto;
+	width: 700px;
+}
+
+.menu
+
+{
+
+	float:left;
+	text-align: center;
+	margin:auto;
+	width: 100%;
+	height: 100px;
+	background-color:#D0D0D0;
+	text-decoration:none;
+	
+}
+
+.photo
+{
+	float:left;
+	text-align:left;
+	padding:0px;
+	margin:auto;
+	width: 700px;
+	background-color:;
+	text-decoration:none;
+	border-radius: 5px;
+}
+
+.comment
+{
+
+	text-align:right;
+	padding:10px;
+	margin:auto;
+	width: 600px;
+	background-color:D0D0D0;
+	text-decoration:none;
+
+}
+
+.mitou
+{
+	text-align: right;
+	padding:10px;
+	margin:auto;
+	width: 1000px;
+	background-color:#E8E8E8 ;
+	text-decoration:none;
+	border-radius: 5px;
+}
+

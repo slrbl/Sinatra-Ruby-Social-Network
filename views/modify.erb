@@ -1,0 +1,22 @@
+
+<div class="content">
+
+<form action = "/modify" method = "post">
+	<h1>Modify your post</h1>
+ 
+	<input type = "hidden"  name =  "old_title" id = "old_title" value="<%= @to_be_modified.title %>"/>
+	<input type = "hidden"  name =  "old_content" id = "old_content" value="<%= @to_be_modified.content %>"/>
+	
+		<h2><%= @to_be_modified.title %></h2>
+		
+	
+
+		<p>
+		<textarea type = "text"  name =  "content" id = "content"/><%= @to_be_modified.content %></textarea>
+	</p>
+	<p>
+		<input type = "submit"/>
+	</p>
+</form>
+</div>
+

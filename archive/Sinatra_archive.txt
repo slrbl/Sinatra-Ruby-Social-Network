@@ -1,0 +1,4 @@
+Sinatra
+Posted by: not logged in
+Posted on: Thu Nov 29 15:08:55 +0100 2012
+Sinatra nous offre donc, avec une architecture propre et a peine plus compliquée que celle d'un site php standard, un site web robuste, avec un gain convenable de performance (les fichiers ne sont lu qu'au démarrage de l'application, donc pas d'accès au disque), plus toutes les gems de ruby, que ce soit pour l'authentification, les différents moteurs de templates, ... bref, le bonheur.

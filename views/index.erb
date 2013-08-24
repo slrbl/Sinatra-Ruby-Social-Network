@@ -1,0 +1,104 @@
+<div class="content">
+	<form action = "/index" enctype="multipart/form-data" method = "post">
+	<h2>Add a post here</h2>
+	<h3>Title</h3>
+	<p><input class="title_input"type = "text"  name =  "title" id = "title" width = "200"/></input></p>
+	<h3>Content</h3>
+	<textarea type = "text"  name =  "content" id = "content" /></textarea>
+	<p>
+		<label for="password">Photo: </label>
+    		<input type  = "file" name  = "myfile"/>
+	</p>
+	<p>
+	<label for="password">Video: </label>
+    <input type  = "file" name  = "myvideo"/>
+</p>
+
+<p>
+<input type = "submit" value="post it!" class="button"/>
+</p>
+</form>
+
+
+
+
+
+<% @posts.each do |post| %> 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<div class="line"></div>
+<% userPh = User.get(post.user_username )%>
+<div class="photo">
+
+<img src="<%= userPh.photo %>" width="50"/>
+
+
+</div>
+<h3><%post.title %></h3>
+<h4><%= post.user_username %></h4> 
+<p><%= post.content %></p>
+<% if post.photo!=nil %>
+<img src="<%= post.photo %>"  height="300"/>
+<% end %>
+
+<% if post.video!=nil %>
+
+
+
+<video controls src="<%= post.video %>" height="300" ></video>
+
+<% end %>
+
+<% @concerned_post_title=post.title %>
+<div class="button_container">
+<p>
+<% if post.user_username==the_user_name %>
+<div class="delete_button">
+<form action = "/index/delete" method = "post">
+<input type = "hidden"  name =  "t" id = "t" value="<%= post.title %>"/>
+<input type="submit" name="delete" id ="delete" value="delete" class="button"/>
+</form>
+</div>
+<div class="modify_button">
+<form action = "/modify" method = "get">
+<input type = "hidden"  name =  "t" id = "t" value="<%= post.title %>"/>
+<input type="submit" name="delete" id ="delete" value="modify" class="button" />
+</form>
+</div>
+<% end %>
+<div>
+
+<br>
+<br>
+
+
+<% if @comments!=nil %> 
+	<% @comments.each do |comment| %> 
+		<% if comment.post_title==post.title %> 
+		<center><div class="linecomment"></div></center>
+			<div class="comment">
+				<% userPh = User.get(comment.user_username )%>
+				<div class="photo">
+					<img src="<%= userPh.photo %>"  height="30"/>
+				</div>
+				<p><span style="color:brown;font-weight:bold"><%= comment.user_username %></span>&nbsp;<%= comment.content %></p>
+			</div>
+		<% end %> 
+	<% end %> 
+<div class="comment">
+<form action = "/index/comment" method = "post">
+<input type = "hidden"  name =  "concerned" id = "concerned" value="<%= post.title %>"/>
+<input class="comment_input" type = "text"  name =  "comment" id = "comment"/></input>
+<input type = "submit" value="comment" visible="false" class="button"/>
+</form>
+
+
+</div>
+
+<% end %> 
+</div>
+</p>
+</div>
+<% end %>  
+<div>

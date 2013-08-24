@@ -1,0 +1,15 @@
+%h1 Signup page
+
+%form{:action => "/signup", :method => "post"}
+  %legend signup here (hint: All the fiel are required")
+  %p
+    %label{:for => "username"} Username:
+    %input{:type => "text", :name => "username", :id => "username"} 
+  %p
+    %label{:for => "email"} Email:
+    %input{:type => "text", :name => "email", :id => "email"}
+  %p
+    %label{:for => "password"} Password: 
+    %input{:type => "password", :name => "password", :id => "password"}
+  %p
+    %input{:type => "submit"}

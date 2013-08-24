@@ -1,0 +1,25 @@
+<div class="content">
+	<h1>Here are all your posts
+<% @posts.each do |post| %> 
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+<div class="line"></div>
+
+<h3>Title: <%= post.title %></h3>
+<h4>Author: <%= post.user_username %></h4> 
+<p><%= post.content %></p>
+<div style="float:left">
+<form action = "/index/delete" method = "post">
+	<input type = "hidden"  name =  "t" id = "t" value="<%= post.title %>"/>
+	<input type="submit" name="delete" id ="delete" value="delete" />
+</form>
+</div>
+<div  style="float:left">
+<form action = "/modify" method = "get">
+	<input type = "hidden"  name =  "t" id = "t" value="<%= post.title %>"/>
+	<input type="submit" name="delete" id ="delete" value="modify" />
+</form>
+</div>
+<% end %>
+</div>

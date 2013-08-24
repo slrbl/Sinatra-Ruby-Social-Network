@@ -1,0 +1,12 @@
+%p You are now looking at the index page. You can add a post.
+
+%form{:action => "/index", :method => "post"}
+  %legend Add a post here")
+  %p
+    %label{:for => "title"} Title:
+    %input{:type => "text", :name => "title", :id => "title"} 
+  %p
+    %label{:for => "content"} Content:
+    %input{:type => "text", :name => "content", :id => "content"}
+  %p
+    %input{:type => "submit"}

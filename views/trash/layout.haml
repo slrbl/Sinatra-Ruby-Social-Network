@@ -1,0 +1,25 @@
+
+%html
+  %head
+    %title Sign In Application
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/main.css"}
+  %body
+    %ul.horizontal
+      
+      %li
+        %a{:href => "/"} Home
+      %li
+        %a{:href => "/signup"} Signup
+      %li
+        %a{:href => "/about"} About
+      %li
+        - if !is_logged_in?
+          %a{:href => "/login"} Log In
+        - else
+          %a{:href => "/logout"} Log Out
+      - if !@error_message.nil?
+        .error== There was an error: #{@error_message}
+      - if !@message.nil?
+        .message== Message: #{@message}
+      %p== You are: #{the_user_name}
+      = yield

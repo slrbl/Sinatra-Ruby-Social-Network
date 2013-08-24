@@ -1,0 +1,43 @@
+<div class="content">
+<h1>Search post</h1>
+<form action = "/search" method = "post">
+	
+ 
+	
+	
+		<p for = "title">By title</p>
+		<p>
+		<input type = "text"  name =  "tbftitle" id = "tbftitle"/>
+	</p>
+	
+		<p for = "content">By content</p>
+		<p>
+		<input type = "text"  name =  "tbfcontent" id = "tbfcontent" />
+	</p>
+
+	
+		<p for = "content">By archive</p>
+		<p>
+		<input type = "text"  name =  "tbfarchive" id = "tbfarchive" />
+	</p>
+
+	<p>
+		<input type = "submit" value="Search"/>
+	</p>
+</form>
+
+
+
+<% @found_posts.each do |post| %> 
+ <% if post.content!="" %>
+         
+       
+
+<div class="line"></div	>
+<h3>Title: <%= post.title %></h3>
+<h4>Author: <%= post.user_username %></h4> 
+<p><%= post.content %></p>
+<% end %>
+
+ <% end %>
+</div>
