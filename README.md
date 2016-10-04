@@ -1,4 +1,5 @@
-.This project was designed by walid.daboubi@gmail.com.
+MeToo, a Ruby (Sinatra) based social network
+Author: walid.daboubi@gmail.com.
 
 *** Login
 You can login using username: walid 
