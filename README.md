@@ -1,4 +1,4 @@
-MeToo, a Ruby (Sinatra) based social network
+This is a Ruby (Sinatra) based social network
 Author: walid.daboubi@gmail.com.
 
 *** Login
